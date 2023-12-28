@@ -8,10 +8,10 @@ const steps = (n, row = 0, str = "") => {
     return steps(n, row + 1);
   }
 
-  if (row <= str.length) {
+  if (str.length <= row) {
     str += "#";
   } else {
-    str += "*";
+    str += " ";
   }
 
   steps(n, row, str);
